@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*Colors*/
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+}
+body {
+  background-image: url("./assets/images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--Light-pink);
+  font-family: "Work Sans", sans-serif;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  position: relative;
+  position: absolute;
+  top: 15rem;
+  height: max-content, 100%;
+  width: 90%; /* Adjust width based on content */
+  max-width: 500px; /* Set a maximum width */
+  padding: 1.95rem;
+  background-color: var(--White);
+  border-radius: 0.75rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+.card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.svg img {
+  width: 70%;
+}
+.card h2 {
+  font-weight: bolder;
+  font-size: 2rem;
+  color: var(--Dark-purple);
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  cursor: pointer;
+  align-items: center;
+}
+.question p {
+  font-weight: bold;
+  color: var(--Dark-purple);
+}
+.question p:hover {
+  color: #cc6ce7;
+}
+.answer {
+  padding-top: 1rem;
+  display: none;
+}
+.answer p {
+  color: var(--Grayish-purple);
+  line-height: 1.3rem;
+  font-size: 0.9rem;
+}
+
+.qanda {
+  box-shadow: 0px 1px 1px var(--Light-pink); /* Light shadow */
+  padding: 0.5rem;
+  margin-bottom: 0.5rem; /* Add spacing between FAQ items */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  body {
+    background-image: url("./assets/images/background-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain; /* Adjust to ensure the whole image is visible */
+    background-position: top top; /* Center the image */
+    background-attachment: fixed; /* Keeps background fixed while scrolling */
+  }
+  main {
+    min-height: 100vh;
+  }
+  .card {
+    height: max-content;
+    width: 80%;
+    padding: 1.75rem;
+    overflow: auto;
+  }
+
+  .card h2 {
+    font-size: 1.8rem;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  .answer p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    background-image: url("./assets/images/background-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain; /* Adjust to ensure the whole image is visible */
+    background-position: top top; /* Center the image */
+    background-attachment: fixed; /* Keeps background fixed while scrolling */
+  }
+  .card {
+    height: max-content;
+    width: 80%;
+    padding: 1.75rem;
+    overflow: auto;
+  }
+
+  .card-header {
+    gap: 0.5rem;
+  }
+
+  .svg img {
+    width: 40px;
+  }
+
+  .card h2 {
+    font-size: 1.6rem;
+  }
+
+  .question {
+    font-size: 0.9rem;
+  }
+
+  .answer p {
+    font-size: 0.8rem;
+  }
+
+  .icon img {
+    width: 20px;
+  }
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--Dark-purple);
+  color: var(--White);
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+footer p a {
+  color: hsl(292, 16%, 49%);
+  text-decoration: none;
+}
